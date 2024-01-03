@@ -7,7 +7,7 @@ from paddle.nn.initializer import Assign
 img = Image.open('./work/images/section1/91137200db2fdeaad2c666342a4d653.jpg')
 
 # 设置卷积核参数
-w = np.array([[-1,-1,-1], [-1,8,-1], [-1,-1,-1]], dtype='float32')
+w = np.array([[-1,-1,-1], [-1,8,-1], [-1,-1,-1]], dtype='float32')/8
 w = w.reshape([1, 1, 3, 3])
 # 由于输入通道数是3，将卷积核的形状从[1,1,3,3]调整为[1,3,3,3]
 w = np.repeat(w, 3, axis=1)
